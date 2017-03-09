@@ -1,0 +1,14 @@
+[get_function]
+
+def parse$function_id(response):
+    method = '$request_method'
+    if method == 'get':
+        pass
+        request_class = scrapy.http.Request
+    else:
+        pass
+        request_class = scrapy.http.FormRequest
+        data = json.loads("$post_data")
+        if not data:
+            warning('post data is empty')
+
